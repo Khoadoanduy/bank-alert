@@ -99,7 +99,7 @@ app.post("/server/generate_link_token", async (req, res, next) => {
  */
 app.post("/server/swap_public_token", async (req, res, next) => {
   try {
-    /*
+    
     // Part 1
 
     const result = await plaidClient.itemPublicTokenExchange({
@@ -107,9 +107,7 @@ app.post("/server/swap_public_token", async (req, res, next) => {
     });
     const data = result.data;
     console.log("publicTokenExchange data", data);
-    */
-
-    /*
+    
     const updateData = {};
     updateData[FIELD_ACCESS_TOKEN] = data.access_token;
     updateData[FIELD_ITEM_ID] = data.item_id;
@@ -117,10 +115,8 @@ app.post("/server/swap_public_token", async (req, res, next) => {
     await updateUserRecord(updateData);
     console.log("publicTokenExchange data", data);
     res.json({ success: true });
-    return;
-    */
-
-    res.json({ todo: "This endpoint has not yet been implemented" });
+    
+    // res.json({ todo: "This endpoint has not yet been implemented" });
   } catch (error) {
     next(error);
   }

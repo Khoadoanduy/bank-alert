@@ -15,6 +15,7 @@
 		31C7D5772A8EEAEF00605DD9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31C7D5752A8EEAEF00605DD9 /* LaunchScreen.storyboard */; };
 		31C7D57F2A8FD37700605DD9 /* ServerCommunicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C7D57E2A8FD37700605DD9 /* ServerCommunicator.swift */; };
 		31C7D5812A9013F200605DD9 /* PlaidLinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C7D5802A9013F200605DD9 /* PlaidLinkViewController.swift */; };
+		6984AACB2CC4538D005025C0 /* LinkKit in Frameworks */ = {isa = PBXBuildFile; productRef = 6984AACA2CC4538D005025C0 /* LinkKit */; };
 		7CE0C7A72A9FEC7D003941EB /* ServerResponses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE0C7A62A9FEC7D003941EB /* ServerResponses.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6984AACB2CC4538D005025C0 /* LinkKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +95,7 @@
 			);
 			name = SamplePlaidClient;
 			packageProductDependencies = (
+				6984AACA2CC4538D005025C0 /* LinkKit */,
 			);
 			productName = SamplePlaidClient;
 			productReference = 31C7D5672A8EEAED00605DD9 /* SamplePlaidClient.app */;
@@ -123,6 +126,7 @@
 			);
 			mainGroup = 31C7D55E2A8EEAED00605DD9;
 			packageReferences = (
+				6984AAC92CC4538D005025C0 /* XCRemoteSwiftPackageReference "plaid-link-ios" */,
 			);
 			productRefGroup = 31C7D5682A8EEAED00605DD9 /* Products */;
 			projectDirPath = "";
@@ -380,6 +384,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6984AAC92CC4538D005025C0 /* XCRemoteSwiftPackageReference "plaid-link-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/plaid/plaid-link-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.6.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6984AACA2CC4538D005025C0 /* LinkKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6984AAC92CC4538D005025C0 /* XCRemoteSwiftPackageReference "plaid-link-ios" */;
+			productName = LinkKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 31C7D55F2A8EEAED00605DD9 /* Project object */;
 }
