@@ -23,7 +23,7 @@ const server = app.listen(APP_PORT, function () {
 });
 
 // Set up the Plaid client
-/*
+
 const plaidConfig = new Configuration({
   basePath: PlaidEnvironments[process.env.PLAID_ENV],
   baseOptions: {
@@ -36,7 +36,7 @@ const plaidConfig = new Configuration({
 });
 
 const plaidClient = new PlaidApi(plaidConfig);
-*/
+
 
 /**
  * Fetches some info about our user from our "database" and returns it to
@@ -60,7 +60,7 @@ app.get("/server/get_user_info", async (req, res, next) => {
  */
 app.post("/server/generate_link_token", async (req, res, next) => {
   try {
-    /*
+    
     // Part 1
 
     const currentUser = await getUserRecord();
@@ -69,7 +69,7 @@ app.post("/server/generate_link_token", async (req, res, next) => {
       user: {
         client_user_id: userId,
       },
-      client_name: "iOS Demo",
+      client_name: "Kevin",
       country_codes: ["US"],
       language: "en",
       products: ["auth"],
@@ -77,13 +77,11 @@ app.post("/server/generate_link_token", async (req, res, next) => {
     });
     const data = createTokenResponse.data;
     console.log("createTokenResponse", data);
-    */
+    
 
-    /*
+    
     res.json({ expiration: data.expiration, linkToken: data.link_token });
-    return;
-   */
-    res.json({ todo: "This endpoint has not yet been implemented" });
+   
   } catch (error) {
     console.log(
       "Running into an error! Note that if you have an error when creating a " +
