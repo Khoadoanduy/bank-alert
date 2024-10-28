@@ -4,11 +4,22 @@
     "details": [
       {
         "appIDs": [
-          "TEAMID12345.com.example.yourBundleId"
+          "L5YSLP9JMP.com.khoaduydoan.SamplePlaidClient"
         ],
         "components": [
           {
-            "/": "/plaid/redirect/*",
+            "/": "/SamplePlaidClient/redirect/*",
+            "comment": "OAuth Redirect from Plaid"
+          }
+        ]
+      },
+      {
+        "appIDs": [
+          "L5YSLP9JMP.com.khoaduydoan"
+        ],
+        "components": [
+          {
+            "/": "/bank-alert/redirect/*",
             "comment": "OAuth Redirect from Plaid"
           }
         ]

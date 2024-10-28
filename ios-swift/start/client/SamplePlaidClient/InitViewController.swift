@@ -1,9 +1,3 @@
-//
-//  ViewController.swift
-//  SamplePlaidClient
-//
-//  Created by Todd Kerpelman on 8/17/23.
-//
 
 import UIKit
 
@@ -20,6 +14,16 @@ class InitViewController: UIViewController {
 
     @IBAction func makeSimpleCallWasPressed(_ sender: Any) {
         // Ask our server to make a call to the Plaid API on behalf of our user
+        self.communicator.callMyServer(path: "/server/simple_auth", httpMethod: .get){
+            (result : Result<SimpleAuthResponse,ServerCommunicator.Error>) in
+            switch result {
+            case .success(let response):
+                self.simpleCallResults.text = "Retrieved routing number \(response.routingNumber) for \(response.accountName) (xxxxxxxxxxx\(response.accountMask))"
+            case .failure(let error):
+                print("Error: \(error)")
+            
+            }
+        }
     }
     
     private func determineUserStatus() {

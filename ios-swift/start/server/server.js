@@ -127,7 +127,6 @@ app.post("/server/swap_public_token", async (req, res, next) => {
  */
 app.get("/server/simple_auth", async (req, res, next) => {
   try {
-    /*
     // Part 1
 
     const currentUser = await getUserRecord();
@@ -137,9 +136,9 @@ app.get("/server/simple_auth", async (req, res, next) => {
     });
 
     console.dir(authResponse.data, { depth: null });
-    */
+  
 
-    /*
+    
     const accountMask = authResponse.data.accounts[0].mask;
     const accountName = authResponse.data.accounts[0].name;
     const accountId = authResponse.data.accounts[0].account_id;
@@ -152,7 +151,7 @@ app.get("/server/simple_auth", async (req, res, next) => {
     ).routing;
     res.json({ routingNumber, accountMask, accountName });
     return;
-    */
+    
 
     res.json({ todo: "This endpoint has not yet been implemented" });
   } catch (error) {
